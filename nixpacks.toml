@@ -1,0 +1,11 @@
+# Railway uses Nixpacks to build and deploy
+# This config tells it how to handle our fullstack app
+
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.build]
+cmds = ["npm install", "npm run build"]
+
+[start]
+cmd = "node server/index.cjs"
