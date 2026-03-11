@@ -25,8 +25,12 @@ import type { ApiError } from './types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const _env = (import.meta as any).env || {};
-const API_BASE_URL: string = _env.VITE_API_BASE_URL || '';
-const API_MODE: string = _env.VITE_API_MODE || 'mock';
+// 前后端同源部署时，默认使用相对路径 /api/v1
+// 分离部署时，通过 VITE_API_BASE_URL 指定后端地址
+const API_BASE_URL: string = _env.VITE_API_BASE_URL || '/api/v1';
+// 前后端同源部署时，默认使用 live 模式
+// 纯前端开发时，设 VITE_API_MODE=mock 使用模拟数据
+const API_MODE: string = _env.VITE_API_MODE || 'live';
 
 export function getApiConfig() {
   return {
