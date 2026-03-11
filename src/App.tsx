@@ -42,15 +42,12 @@ function LandingPage() {
         {/* Title */}
         <div className="animate-fade-in-up anim-delay-1">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            情绪管理与智能坐垫
+            情绪健康管理平台
             <br />
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">干预系统</span>
+           
           </h1>
           <p className="text-lg text-indigo-300 mb-2 max-w-2xl mx-auto">
             融合中医体质学 · 现代心理生理学 · AI大模型分析
-          </p>
-          <p className="text-sm text-indigo-400/70 max-w-xl mx-auto">
-            通过智能坐垫采集生理数据，结合AI大模型生成个性化情绪健康报告，并联动IoT设备实现智能环境干预
           </p>
         </div>
 
